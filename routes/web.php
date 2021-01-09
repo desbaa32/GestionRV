@@ -25,7 +25,8 @@ Route::get('/medecin/add', [App\Http\Controllers\MedcinController::class, 'add']
 Route::get('/medecin/list', [App\Http\Controllers\MedcinController::class, 'getAll'])->name('listMedecin');
 Route::get('/medecin/edit/{id}', [App\Http\Controllers\MedcinController::class, 'edit'])->name('editMedecin');
 Route::get('/medecin/delete/{id}', [App\Http\Controllers\MedcinController::class, 'delete'])->name('deleteMedecin');
-Route::get('/medecin/update', [App\Http\Controllers\MedcinController::class, 'update'])->name('updateMedecin');
+Route::post('/medecin/update', [App\Http\Controllers\MedcinController::class, 'update'])->name('updateMedecin');
+Route::post('/medecin/traiteForm', [App\Http\Controllers\MedcinController::class, 'traiteForm'])->name('traiteForm');
 
 Route::get('/rendezvous/add', [App\Http\Controllers\RendezVousController::class, 'add'])->name('addRendezvous');
 Route::get('/rendezvous/list', [App\Http\Controllers\RendezVousController::class, 'getAll'])->name('listRendezvous');
