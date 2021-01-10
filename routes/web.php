@@ -33,3 +33,4 @@ Route::get('/rendezvous/list', [App\Http\Controllers\RendezVousController::class
 Route::get('/rendezvous/edit/{id}', [App\Http\Controllers\RendezVousController::class, 'edit'])->name('editRendezvous');
 Route::get('/rendezvous/delete/{id}', [App\Http\Controllers\RendezVousController::class, 'delete'])->name('deleteRendezvous');
 Route::get('/rendezvous/update', [App\Http\Controllers\RendezVousController::class, 'update'])->name('updateRendezvous');
+Route::post('/medecin/traiteFormRv', [App\Http\Controllers\RendezVousController::class, 'traiteFormRv'])->name('traiteFormRv');

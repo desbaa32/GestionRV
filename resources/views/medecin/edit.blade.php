@@ -45,7 +45,8 @@
                             </div>
                             <div class="form-group">
                             <input type="submit" class="btn btn-success"value="Envoyer"name="envoyer"id="envoyer">
-                            <input type="reset" class="btn btn-danger"value="Annuler"name="annuler"id="annuler">
+                            {{-- <input type="reset" class="btn btn-danger"value="Annuler"name="annuler"id="annuler"> --}}
+                            <a class="btn btn-danger" href="{{route('listMedecin')}}">annuler</a>
                             </div>
                         </form>
                     </div>

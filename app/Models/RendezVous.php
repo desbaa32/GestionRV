@@ -25,4 +25,8 @@ class RendezVous extends Model
     {
         return $this->belongsTo('App\Medcin');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

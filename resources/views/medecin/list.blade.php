@@ -27,7 +27,7 @@
                                 <td>{{$item->telephone}}</td>
                                 <td><a class=" btn btn-info " href="{{route('editMedecin',['id'=>$item->id])}}">Editer</a></td>
                                 <td ><a class="btn btn-danger" href="{{route('deleteMedecin',['id'=>$item->id])}}"
-                                     onclick="confirm(voulez  vous vraiment supprimer)"">Supprimer</a></td>
+                                     onclick="return confirm('Voulez  vous vraiment supprimer ?');">Supprimer</a></td>
                             </tr>
                             </tbody>
                             @endforeach
