@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Medcin;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class MedcinController extends Controller
 {
+    /**
+     * pour gerer les connexions
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     //
     public function getAll()
     {
@@ -26,8 +35,8 @@ class MedcinController extends Controller
         $medecin->prenom = $request->prenom;
         $medecin->telephone = $request->telephone;
         $result = $medecin->save();
-        //return (view('medecin.add', ['confirmation' => $result]));
-        return $this->getAll();
+        /*  return $this->getAll(); */
+        return Redirect('/medecin/list');
     }
     public function add()
     {
